@@ -1,0 +1,55 @@
+
+.contenedorFoto{
+
+   
+    max-width: 100%;
+}
+
+#foto{
+    
+    padding: 10px;
+    margin-top: 5%;
+    margin-left: 15%; 
+    width: 20%;
+    height: 60%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    
+    border-top: 20px;
+    border-bottom: 20px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style:double;
+    border-color:#981914;
+}
+
+
+@media (max-width: 600px) {
+    #foto{
+    padding: 10px;
+    margin-top: 5%;
+    margin-left: 15%; 
+    width: 40%;
+    height: 10%;
+    border-top-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+    
+    border-top: 20px;
+    border-bottom: 20px;
+    border-left: 0px;
+    border-right: 0px;
+    border-style:double;
+    border-color:#981914;
+        
+    }
+
+    .contenedorFoto{
+
+            max-width: 100%;
+            
+            margin-left:20%;
+            
+            
+    }
+    
+}

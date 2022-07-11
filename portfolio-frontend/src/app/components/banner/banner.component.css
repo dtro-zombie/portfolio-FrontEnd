@@ -1,6 +1,13 @@
-#banner
-{
+
+
+#banner {
+   
     float: right;
-    width: 50%;
-    height: 400px;
-}
+    max-width: 50%;
+    }
+ 
+    @media (max-width: 600px) {
+        #banner{
+            max-width: 100%;
+        }
+    }

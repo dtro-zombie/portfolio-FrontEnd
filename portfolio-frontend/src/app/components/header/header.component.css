@@ -1,12 +1,41 @@
 
 
 div{
-    background-color:#f6f5f5;
+
+    
+    background-color:#e8e8e7;
 }
 
-app-sociales{
-    float: right;
-    margin-top: 20px;
-    margin-right: 150px;
-   
+ul{
+    display:flex;
+    
+    list-style: none;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    
+}
+
+#APlogo{
+
+    width: 100px;
+}
+
+
+.social:hover{
+    border-radius: 50%;
+    box-shadow: 2px 1px 5px #981914;
+}
+
+.social{
+ 
+    width:30px;
+    margin-left: 5px;
+}
+
+
+@media (max-width: 370px) {
+    .social{
+        width:10px;
+    }
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LogoAPComponent } from './logo-ap.component';
+import { AcercaDeComponent } from './acerca-de.component';
 
-describe('LogoAPComponent', () => {
-  let component: LogoAPComponent;
-  let fixture: ComponentFixture<LogoAPComponent>;
+describe('AcercaDeComponent', () => {
+  let component: AcercaDeComponent;
+  let fixture: ComponentFixture<AcercaDeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LogoAPComponent ]
+      declarations: [ AcercaDeComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LogoAPComponent);
+    fixture = TestBed.createComponent(AcercaDeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
