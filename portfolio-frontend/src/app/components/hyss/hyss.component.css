@@ -1,0 +1,17 @@
+*
+{
+    color: #fff;
+}
+
+#contenedor-principal
+{
+    color: #ffff;
+        text-align: center;
+        padding: 20px;
+}
+h3{
+    border-radius: 0px 50px 0px 50px;
+    text-align: center;
+    display: inline-block;
+    background-color: #981914;
+}
