@@ -1,9 +1,8 @@
-
-
 div{
+    background-color:#f6f5f5;
 
     
-    background-color:#e8e8e7;
+   
 }
 
 ul{
@@ -22,6 +21,8 @@ ul{
 }
 
 
+   
+
 .social:hover{
     border-radius: 50%;
     box-shadow: 2px 1px 5px #981914;
@@ -38,4 +39,5 @@ ul{
     .social{
         width:10px;
     }
+
 }
