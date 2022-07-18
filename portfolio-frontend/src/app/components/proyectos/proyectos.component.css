@@ -3,42 +3,48 @@
     color: white;
 }
 
-#contenedordexp
+#contenedor-principal
 {
-    
-       background-color: #3333;
-        color: #ffff;
-        text-align: center;
-        padding: 20px;
-    
-}
 
-h3{
-    border-radius: 0px 50px 0px 50px;
+    background: rgb(0, 0, 0);
+    color: #fff;
     text-align: center;
-    display: inline-block;
-    background-color: #981914;
+    padding: 20px;
+    
 }
-
 
 .periodo
 {
     margin-top: 10px;
 }
 
+h3{
+    border-radius: 50px 0px;
+    text-align: center;
+    display: inline-block;
+    background-color: #981914;
+}
+
+
+
 
 .container{
 
+    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    
+    
+  
 }
 
 .container .card{
-    width: 200px;
-    height: 350px;
-    border-radius: 30px;
-    
+    width: 300px;
+    height: 200px;
+    border-radius: 10%;
+    flex-direction: column;
+
     box-shadow: 1px 2px 2px 2px #981914;
     overflow: hidden;
     margin: 20px;
@@ -46,10 +52,13 @@ h3{
     transition: all 0.25s;
 }
 
-
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(255, 255, 255);
+}
 
 .container .card img{
-    width: 100%;
+    width: 30%;
     height: auto;
 }
 
@@ -58,11 +67,21 @@ h3{
     font-weight: 600;
 }
 
+.contenedor-foto
+{
+    width: 300px;
+    height: 100px;
+
+    
+}
+
 .container .card p{
     padding: 0 1rem;
     font-size: 16px;
     font-weight: 300;
 }
 
-
+a{
+    text-decoration: none;
+}
 
