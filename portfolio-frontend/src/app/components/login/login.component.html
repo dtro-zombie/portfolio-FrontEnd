@@ -3,10 +3,10 @@
             
 
 
-    <form class="login-form">
+    <form  #f="ngForm" (ngSubmit)="onLogin()" novalidate >
         
-        <div class="div-contenedores"> <input type="email" class="login-username"  required="true" placeholder="Email" /></div>
-        <div class="div-contenedores"><input type="password" class="login-password" required="true" placeholder="Password" /></div>
+        <div class="div-contenedores"> <input type="email" name="nombreUsuario" id="nombreUsuario" class="login-username" [(ngModel)]="nombreUsuario" required="true" placeholder="Usuario" /></div>
+        <div class="div-contenedores"><input type="password" name="password" id="password" class="login-password" [(ngModel)]="password" required="true" placeholder="Password" /></div>
         
         <input type="submit" name="Login" value="Login" class="login-submit" />
     </form>
