@@ -29,6 +29,7 @@ h3{
 
 .container{
 
+    background-color: #3333;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
