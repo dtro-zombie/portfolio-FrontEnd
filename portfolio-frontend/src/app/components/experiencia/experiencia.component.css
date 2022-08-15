@@ -3,6 +3,44 @@
     color: white;
 }
 
+.pencil
+{
+    width: 25px;
+}
+
+
+
+
+.edit{
+    border-radius: 10%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    background-color: #77dd77;
+    
+}
+b{
+    color: black;
+}
+
+
+
+.cont-boton
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.delete{
+
+    border-radius: 10%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    background-color:#ff6961;
+}
+
 #contenedordexp
 {
     

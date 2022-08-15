@@ -1,16 +1,30 @@
 <div id="contenedordexp" >
   <h3>EXPERIENCIA</h3>
+  
+<div> 
+  <button type="button" routerLink="/nuevaexp" *ngIf="isLogged">nueva experiencia</button>
 </div>
-  <div class="container" *ngFor="let Experiencia of expe">
+</div>
+<div class="container" >
+
+  <div *ngFor="let Experiencia of expe">
     <div class="card" >
       <img
-        src="../../../assets/resource porfolio/logos de lenguajes/logo angular.png"
+        src="{{Experiencia.urlimg}}"
       />
       <h4>{{Experiencia.nombreE}}</h4>
       <p>
         {{Experiencia.descripcionE}}
       </p>
-      <p class="periodo">PERIODO</p>
-    </div>
+      <p class="periodo">PERIODO</p> 
 
-  
+      <div class="cont-boton" *ngIf="isLogged">
+          <button class="edit" type="button" routerLink="/editexp/{{Experiencia.id}}" > <div class="pencil"><img  src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
+          <button class="delete" type="button" (click)="delete(Experiencia.id,Experiencia.pathimg)" > <div class="pencil"><img  src="../../../assets/resource porfolio/Logos proyecto/delete.png"></div><b>BORRAR</b></button>
+      </div>      
+    </div>
+ 
+
+
+</div>
+   

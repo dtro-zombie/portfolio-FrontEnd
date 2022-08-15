@@ -19,6 +19,11 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { InterceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
+import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
  @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +38,8 @@ import { InterceptorProvider } from './service/interceptor-service';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent
     
     
   ],
@@ -40,7 +47,7 @@ import { InterceptorProvider } from './service/interceptor-service';
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule,  FormsModule
+    HttpClientModule,  FormsModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideStorage(() => getStorage())
   ],
   providers: [
     InterceptorProvider
