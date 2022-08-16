@@ -108,6 +108,7 @@ export class NewExperienciaComponent implements OnInit {
     {
       this.loading=true;
 
+      
        this.storageService.subirImagen(this.pathimg="exp"+"_"+Date.now(),this.reader2.result).then(urlImagen=>{
       
         this.urlimg="";

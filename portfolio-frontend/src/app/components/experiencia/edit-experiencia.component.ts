@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { deleteObject, getStorage, ref } from '@angular/fire/storage';
-import { ActivatedRoute, Router } from '@angular/router';
-import  firebase from 'firebase/compat/app';
-import 'firebase/compat/storage';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
-import { StorageService } from 'src/app/service/storage.service';
-import { environment } from 'src/environments/environment';
 
-firebase.initializeApp(environment.firebaseConfig);
+import { getStorage, ref, deleteObject } from "firebase/storage";
+import { StorageService } from 'src/app/service/storage.service';
+import { ActivatedRoute, Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-edit-experiencia',
@@ -25,6 +23,7 @@ export class EditExperienciaComponent implements OnInit {
 
   ngOnInit(): void {
     const id= this.activatedRouter.snapshot.params['id']; 
+    
     this.sExperiencia.detail(id).subscribe(
       data=>{
         this.exLab=data;
@@ -36,9 +35,14 @@ export class EditExperienciaComponent implements OnInit {
   }
 
     onUpdate(): void{
+
       const id= this.activatedRouter.snapshot.params['id'];
+      console.log("upDate");
+    console.log(this.exLab);
       this.sExperiencia.update(id,this.exLab).subscribe(
         data=>{
+          console.log("upDate2");
+    console.log(this.exLab);
           this.router.navigate(['']);
         }, err=>{
               alert("Error al modificar experiencia");
@@ -71,7 +75,8 @@ export class EditExperienciaComponent implements OnInit {
       
       this.reader2=reader;
       this.imagen.push(this.reader2.result);
-     console.log("experiencia/"+this.exLab.pathimg.toString());
+      console.log("onloadend");
+     console.log(this.exLab.pathimg.toString());
      
   }
 }
@@ -97,19 +102,20 @@ public deletefirebase(pathimg?:string)
 
 
 
-subir()
+ subir()
     {
 
-        this.deletefirebase(this.exLab.pathimg.toString());
-      console.log("mostrando path");
-     console.log(this.exLab.pathimg);
       this.loading=true;
-
-       this.storageService.subirImagen (this.exLab.pathimg="exp"+"_"+Date.now(),this.reader2.result).then(urlImagen=>{
-      
+      console.log("antes de borrar");
+      console.log(this.exLab.pathimg.toString());
+      this.deletefirebase(this.exLab.pathimg);
+      console.log("despues de borrar");
+      console.log(this.exLab.pathimg.toString());
+       this.storageService.subirImagen(this.exLab.pathimg="exp"+"_"+Date.now(),this.reader2.result).then(urlImagen=>{
+      console.log();
         this.exLab.urlimg="";
       
-        console.log( this.exLab.urlimg+=urlImagen);
+        console.log(this.exLab.urlimg+=urlImagen);
       
         setTimeout(() => 
         
@@ -122,6 +128,10 @@ subir()
       .catch(error=>console.error()
       
       );
+        
+      
+   
+      
 
        
     }
