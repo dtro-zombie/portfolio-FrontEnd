@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
-import { Storage,ref, uploadBytes } from '@angular/fire/storage';
+import { Storage,ref, uploadBytes, getStorage, deleteObject } from '@angular/fire/storage';
 import { StorageService } from 'src/app/service/storage.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
@@ -45,10 +45,7 @@ export class NewExperienciaComponent implements OnInit {
     )
   }
 
-  setpathimg(pathimg:string):void
-  {
-    this.pathimg=pathimg;
-  }
+
   
   imagen: any[]=[];
   

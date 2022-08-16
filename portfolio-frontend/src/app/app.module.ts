@@ -24,7 +24,9 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
- @NgModule({
+ 
+
+@NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
@@ -47,7 +49,8 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule,  FormsModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideStorage(() => getStorage())
+    HttpClientModule,  FormsModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideStorage(() => getStorage()),
+    
   ],
   providers: [
     InterceptorProvider

@@ -40,7 +40,12 @@
   }
   
 
+.div-img
+{
+  display: flex;
+    justify-content: center;
 
+    background-color: #981914;}
 
   body {
     background: #a8e6cf;
@@ -48,7 +53,7 @@
   }
   .img-carga
   {
-    width: 100px;
+    width: 300px;
   }
   .form-contact {
 

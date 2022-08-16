@@ -4,6 +4,7 @@ import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 import { TokenService } from 'src/app/service/token.service';
 import { getStorage, ref, deleteObject } from "firebase/storage";
 
+
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
@@ -27,22 +28,30 @@ export class ExperienciaComponent implements OnInit {
       this.sExpericia.lista().subscribe(data=>{this.expe=data;});
     }
     
-    delete(id?:number, pathimg?:string){
+
+   public deletefirebase(pathimg?:string)
+    {
+      const storage = getStorage();
+
+      // Create a reference to the file to delete
+      const desertRef = ref(storage, "experiencia/"+pathimg);
+      console.log("teoria")
+      console.log(desertRef)
+      // Delete the file
+      deleteObject(desertRef).then(() => {
+        // File deleted successfully
+      }).catch((error) => {
+        // Uh-oh, an error occurred!
+      });
+    }
+
+
+    async delete(id?:number, pathimg?:string){
       if(id != undefined)
       {
         
-        const storage = getStorage();
-
-        // Create a reference to the file to delete
-        const desertRef = ref(storage, "experiencia/"+pathimg);
-        console.log("teoria")
-        console.log(desertRef)
-        // Delete the file
-        deleteObject(desertRef).then(() => {
-          // File deleted successfully
-        }).catch((error) => {
-          // Uh-oh, an error occurred!
-        });
+        //await this.storage.deletefirebase(pathimg);
+      await this.deletefirebase(pathimg);
 
        
 setTimeout(() => 

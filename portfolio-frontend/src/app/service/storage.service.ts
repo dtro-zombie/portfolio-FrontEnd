@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
+import { deleteObject, getStorage, ref } from '@angular/fire/storage';
 import  firebase from 'firebase/compat/app';
 import 'firebase/compat/storage';
 import { environment } from 'src/environments/environment';
-import { NewExperienciaComponent } from '../components/experiencia/new-experiencia.component';
 
 firebase.initializeApp(environment.firebaseConfig);
-
 @Injectable({
   providedIn: 'root'
 })
+
 
 
 export class StorageService {
@@ -31,9 +31,10 @@ export class StorageService {
 
     } catch (err){
       console.log(err);
-      return null;
+      return "https://png.pngtree.com/png-clipart/20190921/original/pngtree-no-photo-taking-photo-illustration-png-image_4698291.jpg";
     }
   }
+
 }
 
 
