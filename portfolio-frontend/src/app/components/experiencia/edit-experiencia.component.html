@@ -1,23 +1,4 @@
-<!--<div class="container" *ngIf="exLab">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group">
-                    <label for="nombreE">Nombre de la empresa</label>
-                    <input type="text" class="form-control" name="nombreE" id="nombreE" [(ngModel)]="exLab.nombreE" required>
-                </div>
-                <div class="form-group">
-                    <label for="nombreE">descripcion tarea</label>
-                    <input type="text" class="form-control" name="descripcionE" id="descripcionE" [(ngModel)]="exLab.descripcionE" required>
-                </div>
-                <button class="btn btn-primary">
-                    Actualizar Experiencia
-                </button>
 
-            </form>
-        </div>
-    </div>
-</div>-->
 
 <section class="form-contact" *ngIf="exLab">
   
@@ -55,5 +36,5 @@
 
     </form>
 
-    <div>{{exLab.pathimg}}</div>
+    
   </section>

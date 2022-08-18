@@ -24,6 +24,8 @@ import { EditExperienciaComponent } from './components/experiencia/edit-experien
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { NewEducacionComponent } from './components/educacion/new-educacion.component';
+import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 
  @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
     HomeComponent,
     LoginComponent,
     NewExperienciaComponent,
-    EditExperienciaComponent
+    EditExperienciaComponent,
+    NewEducacionComponent,
+    EditEducacionComponent
     
     
   ],

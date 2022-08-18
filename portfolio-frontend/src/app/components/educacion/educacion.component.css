@@ -12,7 +12,56 @@
     padding: 20px;
     
 }
+.pencil
+{
+    width: 25px;
+}
+.btn-primary {
+   
+    margin: 50px;
+    padding: 10px;
+    background: #981914;
+    border: none;
+    color: white;
+    font-size: 20px;
+    /* pointer-events: none; */
+    cursor: pointer;
+  
+  }
 
+
+
+.edit{
+    border-radius: 10%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    background-color: #77dd77;
+    
+}
+b{
+    color: black;
+}
+
+
+
+.cont-boton
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.delete{
+
+    border-radius: 10%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    background-color:#ff6961;
+}
+
+  
 .periodo
 {
     margin-top: 10px;

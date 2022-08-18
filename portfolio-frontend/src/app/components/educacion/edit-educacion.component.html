@@ -1,0 +1,42 @@
+
+
+<section class="form-contact" *ngIf="edu">
+  
+    <div class="div-img"><img  class="img-carga" src="{{imagen[0]}}" ></div>
+    <header>
+      <span>
+
+        
+        <div class="btn-upload">
+
+            
+        
+            <input type="file" accept=".bmp, .gif , .jpg, .tif, .png, .jpeg" name="pathimg"
+             (change)="cargarImagen($event)" 
+            id="urlimg">
+            <label for="urlimg" class="labelInputFile"> <img src="../../../assets/resource porfolio/Logos proyecto/upload.png" alt="upload file"> </label>
+    
+        </div>
+       
+      </span>
+    </header>
+
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="contact">
+      <label for="nombres">Nombre Educacion</label>
+      <input type="text" class="form-control" name="nombreEdu" id="nombreEdu" [(ngModel)]="edu.nombreEdu" required>
+    
+      <label for="mensaje">Descripcion de Educacion</label>
+      <textarea type="text" class="form-control" name="descripcionEdu" id="descripcionEdu" [(ngModel)]="edu.descripcionEdu" required></textarea>
+      
+      <label for="periodos">Egreso</label>
+      <input type="text" class="form-control" name="periodo" id="periodo" [(ngModel)]="edu.periodo" required>
+    
+        
+   
+     <div> <button class="btn-primary" [disabled]="loading" (click)="subir()"  >{{(loading)? 'Eperando...': 'Actualizar Educación'}}</button></div>
+     
+
+    </form>
+
+    
+  </section>

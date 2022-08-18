@@ -3,6 +3,7 @@ import { deleteObject, getStorage, ref } from '@angular/fire/storage';
 import  firebase from 'firebase/compat/app';
 import 'firebase/compat/storage';
 import { environment } from 'src/environments/environment';
+import { Experiencia } from '../model/experiencia';
 
 firebase.initializeApp(environment.firebaseConfig);
 @Injectable({
@@ -20,8 +21,16 @@ export class StorageService {
   async subirImagen(nombre: string, imgBase64:any){
 
     try{
-         
-          let respuesta= await this.storareRef.child("experiencia/"+nombre).putString(imgBase64,'data_url');
+         let carpeta:string;
+         if(nombre.includes("exp"))
+         {
+           carpeta="experiencia/"
+         }
+         if(nombre.includes("edu"))
+         {
+           carpeta="educacion/"
+         }
+          let respuesta= await this.storareRef.child(carpeta+nombre).putString(imgBase64,'data_url');
           this.rta2=respuesta.ref.fullPath;
        
           console.log("obtengo algo");

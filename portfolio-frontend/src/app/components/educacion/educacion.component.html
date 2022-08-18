@@ -1,42 +1,28 @@
 <div id="contenedordeedu">
   <h3>EDUCACION</h3>
 
-  <div class="container">
+  <div> 
+    <button type="button" class="btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">nueva educacion</button>
+</div>
+</div>
+<div class="container" >
+
+  
+    <div *ngFor="let Educacion of edu">
     <div class="card">
       <img
-        src="../../../assets/resource porfolio/logos de lenguajes/logo angular.png"
+      src="{{Educacion.urlimgEdu}}"
       />
-      <h4>Naturaleza</h4>
+      
+      <h4>{{Educacion.nombreEdu}}</h4>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi
-        unde?
+        {{Educacion.descripcionEdu}}
       </p>
-      <p class="periodo">PERIODO</p>
-    </div>
-
-    <div class="card">
-      <img
-        src="../../../assets/resource porfolio/logos de lenguajes/logo angular.png"
-      />
-      <h4>Comida</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi
-        unde?
-      </p>
-
-      <p class="periodo">PERIODO</p>
-    </div>
-
-    <div class="card">
-      <img
-        src="../../../assets/resource porfolio/logos de lenguajes/logo angular.png"
-      />
-      <h4>Tecnología</h4>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi
-        unde?
-      </p>
-      <p class="periodo">PERIODO</p>
+      <p class="periodo">{{Educacion.periodo}}</p>
+      <div class="cont-boton" *ngIf="isLogged">
+        <button class="edit" type="button" routerLink="/editedu/{{Educacion.id}}" > <div class="pencil"><img  src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
+        <button class="delete" type="button" (click)="delete(Educacion.id,Educacion.pathimgEdu)" > <div class="pencil"><img  src="../../../assets/resource porfolio/Logos proyecto/delete.png"></div><b>BORRAR</b></button>
+      </div>      
+    
     </div>
   </div>
-</div>
