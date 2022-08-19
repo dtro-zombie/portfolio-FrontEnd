@@ -26,6 +26,8 @@ import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { NewEducacionComponent } from './components/educacion/new-educacion.component';
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
+import { NewHyssComponent } from './components/hyss/new-hyss.component';
+import { EditHyssComponent } from './components/hyss/edit-hyss.component';
 
  @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { EditEducacionComponent } from './components/educacion/edit-educacion.co
     NewExperienciaComponent,
     EditExperienciaComponent,
     NewEducacionComponent,
-    EditEducacionComponent
+    EditEducacionComponent,
+    NewHyssComponent,
+    EditHyssComponent
     
     
   ],

@@ -5,6 +5,8 @@ import { NewEducacionComponent } from './components/educacion/new-educacion.comp
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { HomeComponent } from './components/home/home.component';
+import { EditHyssComponent } from './components/hyss/edit-hyss.component';
+import { NewHyssComponent } from './components/hyss/new-hyss.component';
 import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path:'nuevaexp',component:NewExperienciaComponent},
   {path:'editexp/:id',component:EditExperienciaComponent},
   {path:'nuevaedu',component:NewEducacionComponent},
-  {path:'editedu/:id',component:EditEducacionComponent}
+  {path:'editedu/:id',component:EditEducacionComponent},
+  {path:'nuevahard',component:NewHyssComponent},
+  {path:'edithard/:id',component:EditHyssComponent}
   
 ];
 

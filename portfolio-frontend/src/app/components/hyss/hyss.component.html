@@ -1,23 +1,29 @@
-
-
-
 <div id="contenedor-principal">
-
     <h3>HARD & SOFT SKILLS</h3>
+        <div> 
+             <button type="button" class="btn-primary" routerLink="/nuevahard" *ngIf="isLogged">Nueva Hard o Skill </button>
+        </div>
+</div>
 
-    <div class="container">
 
+<div class="contenedorcirculo">
+
+    <div *ngFor="let Hard of hard">
+        <h2>{{Hard.nombreHard}}</h2>
+ <div class="container">
+            
+    
         <circle-progress
     [space]="-10"
     [showTitle]="false"
     [showUnits]="false"
     [showImage]="true"
-    [imageHeight]="100"
-    [imageWidth]="100"
-    [imageSrc]="'../../../assets/resource porfolio/logos de lenguajes/nodejs.png'"
+    [imageHeight]="70"
+    [imageWidth]="70"
+    [imageSrc]=Hard.urlimgHard
     [showSubtitle]="false"
     [outerStrokeGradient]="true"
-    [percent]="50"
+    [percent]=Hard.porcentaje
     [radius]="60"
     [outerStrokeWidth]="10"
     [outerStrokeWidth]="16"
@@ -28,119 +34,19 @@
     [animation]="true"
     [animationDuration]="3000"
   ></circle-progress>
-  <circle-progress
-    [space]="-10"
-    [showTitle]="false"
-    [showUnits]="false"
-    [showImage]="true"
-    [imageHeight]="100"
-    [imageWidth]="100"
-    [imageSrc]="'../../../assets/resource porfolio/logos de lenguajes/nodejs.png'"
-    [showSubtitle]="false"
-    [outerStrokeGradient]="true"
-    [percent]="50"
-    [radius]="60"
-    [outerStrokeWidth]="10"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="10"
-    [outerStrokeColor]="'#b91817'"
-    [outerStrokeGradientStopColor]="'#981914'"
-    [innerStrokeColor]="'#333333'"
-    [animation]="true"
-    [animationDuration]="3000"
-  ></circle-progress>
-  <circle-progress
-    [space]="-10"
-    [showTitle]="false"
-    [showUnits]="false"
-    [showImage]="true"
-    [imageHeight]="100"
-    [imageWidth]="100"
-    [imageSrc]="'../../../assets/resource porfolio/logos de lenguajes/nodejs.png'"
-    [showSubtitle]="false"
-    [outerStrokeGradient]="true"
-    [percent]="50"
-    [radius]="60"
-    [outerStrokeWidth]="10"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="10"
-    [outerStrokeColor]="'#b91817'"
-    [outerStrokeGradientStopColor]="'#981914'"
-    [innerStrokeColor]="'#333333'"
-    [animation]="true"
-    [animationDuration]="3000"
-  ></circle-progress>
-  <circle-progress
-    [space]="-10"
-    [showTitle]="false"
-    [showUnits]="false"
-    [showImage]="true"
-    [imageHeight]="100"
-    [imageWidth]="100"
-    [imageSrc]="'../../../assets/resource porfolio/logos de lenguajes/nodejs.png'"
-    [showSubtitle]="false"
-    [outerStrokeGradient]="true"
-    [percent]="50"
-    [radius]="60"
-    [outerStrokeWidth]="10"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="10"
-    [outerStrokeColor]="'#b91817'"
-    [outerStrokeGradientStopColor]="'#981914'"
-    [innerStrokeColor]="'#333333'"
-    [animation]="true"
-    [animationDuration]="3000"
-  ></circle-progress>
-  <circle-progress
-    [space]="-10"
-    [showTitle]="false"
-    [showUnits]="false"
-    [showImage]="true"
-    [imageHeight]="100"
-    [imageWidth]="100"
-    [imageSrc]="'../../../assets/resource porfolio/logos de lenguajes/nodejs.png'"
-    [showSubtitle]="false"
-    [outerStrokeGradient]="true"
-    [percent]="50"
-    [radius]="60"
-    [outerStrokeWidth]="10"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="10"
-    [outerStrokeColor]="'#b91817'"
-    [outerStrokeGradientStopColor]="'#981914'"
-    [innerStrokeColor]="'#333333'"
-    [animation]="true"
-    [animationDuration]="3000"
-  ></circle-progress>
-  <circle-progress
-    [space]="-10"
-    [showTitle]="false"
-    [showUnits]="false"
-    [showImage]="true"
-    [imageHeight]="100"
-    [imageWidth]="100"
-    [imageSrc]="'../../../assets/resource porfolio/logos de lenguajes/nodejs.png'"
-    [showSubtitle]="false"
-    [outerStrokeGradient]="true"
-    [percent]="50"
-    [radius]="60"
-    [outerStrokeWidth]="10"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="10"
-    [outerStrokeColor]="'#b91817'"
-    [outerStrokeGradientStopColor]="'#981914'"
-    [innerStrokeColor]="'#333333'"
-    [animation]="true"
-    [animationDuration]="3000"
-  ></circle-progress>
-
-
+  
+  <div class="cont-boton" *ngIf="isLogged">
+    <button class="edit" type="button" routerLink="/edithard/{{Hard.id}}" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
+    <button class="delete" type="button" (click)="delete(Hard.id,Hard.pathimgHard)" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/delete.png"></div><b>BORRAR</b></button>
+</div>      
 
 
     </div>
     
-
-
-
-
 </div>
+</div>
+
+
+
+
+   
