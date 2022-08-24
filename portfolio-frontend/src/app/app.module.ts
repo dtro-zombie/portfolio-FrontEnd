@@ -17,7 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InterceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './components/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './components/experiencia/edit-experiencia.component';
@@ -28,6 +28,10 @@ import { NewEducacionComponent } from './components/educacion/new-educacion.comp
 import { EditEducacionComponent } from './components/educacion/edit-educacion.component';
 import { NewHyssComponent } from './components/hyss/new-hyss.component';
 import { EditHyssComponent } from './components/hyss/edit-hyss.component';
+import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
+import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
+import { EditBannerComponent } from './components/banner/edit-banner.component';
+
 
  @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { EditHyssComponent } from './components/hyss/edit-hyss.component';
     NewEducacionComponent,
     EditEducacionComponent,
     NewHyssComponent,
-    EditHyssComponent
+    EditHyssComponent,
+    EditProyectosComponent,
+    NewProyectosComponent,
+    EditBannerComponent,
+
     
     
   ],

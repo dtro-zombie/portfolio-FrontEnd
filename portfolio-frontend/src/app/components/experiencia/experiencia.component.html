@@ -1,3 +1,4 @@
+
 <div id="contenedordexp" >
   <h3>EXPERIENCIA</h3>
       <div> 
@@ -22,8 +23,8 @@
       <p class="periodo">PERIODO</p> 
 
       <div class="cont-boton" *ngIf="isLogged">
-          <button class="edit" type="button" routerLink="/editexp/{{Experiencia.id}}" > <div class="pencil"><img  src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
-          <button class="delete" type="button" (click)="delete(Experiencia.id,Experiencia.pathimg)" > <div class="pencil"><img  src="../../../assets/resource porfolio/Logos proyecto/delete.png"></div><b>BORRAR</b></button>
+          <button class="edit" type="button" routerLink="/editexp/{{Experiencia.id}}" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
+          <button class="delete" type="button" (click)="delete(Experiencia.id,Experiencia.pathimg)" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/delete.png"></div><b>BORRAR</b></button>
       </div>      
     </div>
  

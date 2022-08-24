@@ -30,11 +30,13 @@ export class StorageService {
          {
            carpeta="educacion/"
          }
+         if(nombre.includes("banner"))
+         {
+           carpeta="banner/"
+         }
           let respuesta= await this.storareRef.child(carpeta+nombre).putString(imgBase64,'data_url');
           this.rta2=respuesta.ref.fullPath;
-       
-          console.log("obtengo algo");
-          console.log(this.rta2);
+          
           
           return await respuesta.ref.getDownloadURL();
 

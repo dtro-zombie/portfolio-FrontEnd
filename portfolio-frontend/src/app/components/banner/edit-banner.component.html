@@ -1,0 +1,28 @@
+<section class="form-contact" *ngIf="banner">
+  <div class="div-img"><img class="img-carga" /></div>
+  <header>
+    <span>
+      <div class="btn-upload">
+        <input
+          type="file"
+          accept=".bmp, .gif , .jpg, .tif, .png, .jpeg"
+          name="pathimg"
+          (change)="cargarImagen($event)"
+          id="urlimg"
+        />
+        <label for="urlimg" class="labelInputFile">
+          <img
+            src="../../../assets/resource porfolio/Logos proyecto/upload.png"
+            alt="upload file"
+          />
+        </label>
+      </div>
+    </span>
+  </header>
+
+  <div>
+    <button class="btn-primary" [disabled]="loading" (click)="subir()">
+      {{ loading ? "Eperando..." : "Actualizar Educación" }}
+    </button>
+  </div>
+</section>

@@ -1,85 +1,38 @@
 <div id="contenedor-principal">
-  <h3>PROYECTOS</h3>
-  
-  <div class="container">
+  <h3>HARD & SOFT SKILLS</h3>
+      <div> 
+           <button type="button" class="btn-primary" routerLink="/nuevopro" *ngIf="isLogged">Nuevo Proyecto</button>
+      </div>
+</div>
+<div class="container">
     
-    <div class="card">
-        <a href="https://www.facebook.com/" >
-        <h4>Naturaleza</h4>
+    <div class="div-titulo" *ngFor="let proyectos of proyecto" >
+      <h2>{{proyectos.nombrePro}}</h2>
+      <h4>{{proyectos.fecha}}</h4>
+     
 
-        <DIv class="contenedor-foto">
+      <a href="{{proyectos.link}}" target="_blank" rel="noopener noreferrer" >
 
-            <img
-        src="../../../assets/resource porfolio/logos de lenguajes/logo angular.png"
-      />
-
-        </DIv>
-      
-      
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi
-        unde?
-      </p>
-    
-      <p class="periodo">PERIODO</p>
-
-    </a>
-
-      
-    </div>
-
-    <div class="container">
-    
         <div class="card">
-            <a href="https://www.facebook.com/" >
-            <h4>Naturaleza</h4>
-    
-            <DIv class="contenedor-foto">
-    
-                <img
-            src="../../../assets/resource porfolio/logos de lenguajes/logo angular.png"
-          />
-    
-            </DIv>
-          
-          
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi
-            unde?
-          </p>
+  
         
-          <p class="periodo">PERIODO</p>
-    
-        </a>
-    
-          
+   
         </div>
 
-        <div class="container">
+      </a>
+     
+  <div>
     
-            <div class="card">
-                <a href="https://www.facebook.com/" >
-                <h4>Naturaleza</h4>
-        
-                <DIv class="contenedor-foto">
-        
-                    <img
-                src="../../../assets/resource porfolio/logos de lenguajes/logo angular.png"
-              />
-        
-                </DIv>
-              
-              
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, excepturi
-                unde?
-              </p>
-            
-              <p class="periodo">PERIODO</p>
-        
-            </a>
-        
-              
-            </div>
+    <p>{{proyectos.descripcioPro}}</p>
+  </div>
+  
+  <div class="cont-boton" *ngIf="isLogged">
+    <button class="edit" type="button" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
+    <button class="delete" type="button" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/delete.png"></div><b>BORRAR</b></button>
+</div> 
+
+  
+  </div>
+
 
 </div>

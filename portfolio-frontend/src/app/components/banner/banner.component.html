@@ -1,9 +1,21 @@
 
-<div class="contenedorbanner">
-    <img src="../../../assets/resource porfolio/Logos proyecto/banner.png" id="banner">
-</div>
+   <div class="contenedorbanner" *ngFor="let Banner of banner">
+<body>
+  
+   
+  
+  <div class="cont-boton" *ngIf="isLogged">
+    <button class="edit" type="button" routerLink="/editbanner/{{Banner.id}}" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
+  </div>
+  <div class="contenedor">
+    <header>
+      <img src="{{Banner.linkBa}}">
+        
+    </header>
+  </div>
+  </body>
 
-    
+</div>
 
 
 

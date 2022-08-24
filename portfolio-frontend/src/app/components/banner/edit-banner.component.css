@@ -55,7 +55,16 @@
     {
       width: 300px;
     }
-    
+    .form-contact {
+  
+      background: #FFF;
+      width: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 7px 13px 37px rgba(0, 0, 0, .8);
+    }
     
     header {
       width: 100%;
@@ -70,11 +79,45 @@
       text-align: center;
       padding: 2.5rem;
     }
-
+    
+    .contact div{
+      text-align: center;
+    }
+  
+    .contact {
+      
+      
+      padding: .8rem;
+      overflow: hidden;
+      color: gray;
+    }
+    
+    .contact label, .contact input, .contact textarea {
+     
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;   
+    }
+    
+    .contact label {
+      font-weight: 700;
+    }
+    
+    .contact input:not([type='submit']), .contact textarea {
+      border: none;
+      border-bottom: 2px solid #981914;
+      margin-bottom: 10px;
+      font-size: 20px;
+      outline: none;
+      color: gray;
+    }
+    
+    .contact textarea {
+      min-height: 100px;
+    }
     
     .btn-primary {
-      border:1px,1px,#3333;
-      width: 100%;
+     
       padding: 10px;
       background: #981914;
       border: none;

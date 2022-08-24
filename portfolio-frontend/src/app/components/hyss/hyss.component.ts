@@ -15,11 +15,15 @@ export class HyssComponent implements OnInit {
   hard:Hard[]=[];
   constructor(private sHard:SHardService,private tokenService:TokenService) { }
   isLogged=false;
- // public currentValue=60;
+ 
  
  ngOnInit(): void {
-
+  
    this.cargarHard(); 
+
+    
+
+
     if(this.tokenService.getToken())
     {
       this.isLogged=true;
@@ -73,16 +77,6 @@ data=>{
  
   }
 
-  porcentaje(porcentaje:string):string
-  {
-    
-    return '10';
-
-  }
-
-  percent(number:number)
-  {
-      return number;
-  }
+  
 
 }

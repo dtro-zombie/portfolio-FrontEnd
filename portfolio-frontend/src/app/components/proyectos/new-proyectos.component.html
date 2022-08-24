@@ -1,0 +1,76 @@
+<section class="form-contact">
+  
+    <div class="div-img"><img  class="img-carga" src="{{imagen[0]}}" ></div>
+    <header>
+      <span>
+
+        
+        <div class="btn-upload">
+
+            
+        
+            <input type="file" accept=".bmp, .gif , .jpg, .tif, .png, .jpeg" (change)="cargarImagen($event)" 
+            id="urlimg">
+            <label for="urlimg" class="labelInputFile"> <img src="../../../assets/resource porfolio/Logos proyecto/upload.png" alt="upload file"> </label>
+    
+        </div>
+       
+      </span>
+    </header>
+
+    <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="contact">
+        <label for="nombre">Nombre de Educación</label>
+      <input type="text"
+      class="form-control"
+      name="nombrePro"
+      id="nombrePro"
+      #input1
+      (keyup)="getValue(input1.value)"
+      ([ngModel])="nombrePro" 
+    
+      required>
+    
+     
+
+      <label for="periodos">Egreso</label>
+      <input type="text"
+      class="form-control"
+      name="descripcion"
+      id="descripcion"
+      #input3
+      (keyup)="getValue3(input3.value)"
+      ([ngModel])="descripcion" 
+    
+      required>
+
+      <label for="nombre">Nombre de Educación</label>
+      <input type="text"
+      class="form-control"
+      name="link"
+      id="link"
+      #input1
+      (keyup)="getValue(input1.value)"
+      ([ngModel])="link" 
+    
+      required>
+
+      <label for="nombre">Nombre de Educación</label>
+      <input type="date"
+      class="form-control"
+      name="fecha"
+      id="fecha"
+      #input1
+      (keyup)="getValue(input1.value)"
+      ([ngModel])="fecha" 
+    
+      required>
+
+
+
+     <div> <button class="btn-primary" [disabled]="loading" (click)="subir()"  >{{(loading)? 'Eperando...': 'Agregar Educación'}}</button></div>
+     
+
+    </form>
+
+    
+  </section>

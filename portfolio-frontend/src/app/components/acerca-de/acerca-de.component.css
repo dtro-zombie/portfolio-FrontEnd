@@ -1,111 +1,114 @@
-.sobremi {
-
-
-    display: inline-block;
-
-    top: 84%;
-    left: 48%;
-    background-color: #981914;
-    border-radius: 50px 0px;
-
-}
-
-
-p {
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-
-
-}
-
-b {
-    font-family: 'Roboto', sans-serif;
-    font-size: 140%;
-
-    color: #ffffff;
-
-}
-
-.contenedor {
-
+.box
+{
+    margin-top: 5px;
+    position: relative;
+    width: 300px;
+    height: 300px;
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.piefoto {
+
+.box::after{
+
+    content: "";
+    position: absolute;
+    background: #000;
+    inset: 4px;
+
+}
+.box::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background: linear-gradient(
+        #3333, #981914) ;
+    animation:animate 20s linear infinite;
+}
+
+@keyframes animate
+{
+    0%{
+        transform: rotate(0deg);
+    }
+    10%{
+        transform: rotate(36deg);
+    }
+    20%{
+        transform: rotate(72deg);
+    }
+    30%{
+        transform: rotate(108deg);
+    }
+    40%{
+        transform: rotate(144deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    60%{
+        transform: rotate(216deg);
+    }
+    70%{
+        transform: rotate(252deg);
+    }
+    80%{
+        transform: rotate(288deg);
+    }
+    90%{
+        transform: rotate(324deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+
+
+
+img{
+    z-index: 2;
+    width:95%;
+}
+
+.contenedor-principal
+{
+    height: 100vh;
+   text-align: center;
+
+}
+.contiene-foto
+{
+    margin-top: 10px;
+    display: flex;
+
+    justify-content: space-evenly;
+   
+}
+.contenedor
+{
     text-align: center;
-    width: 50%;
-
 }
 
-.descripcion {
-
-    width: 50%;
-
+.sobremi
+{
+    margin-top:50px;
 }
 
-@media (max-width: 600px) {
-
-    .sobremi {
-
-        margin-top: 50px;
-        display: inline-block;
-
-        top: 84%;
-        left: 48%;
-        background-color: #981914;
-        border-radius: 50px 0px;
-
-    }
-
-    .contenedor {
-
-        width: 100%;
-        text-align: justify;
-    }
-
-    .piefoto {
-        text-align: center;
-        width: 100%;
-
-    }
-
-    .descripcion {
-        width: 100%;
-
-    }
-
-
-}
-
-
-
-
-
-
-
-.contenedorFoto {
-
-
-    width: 100%;
+h3{
+    border-radius: 50px 0px 50px 0px;
     text-align: center;
-    margin-top: 5%;
+    display: inline-block;
+    background-color: #981914;
 }
 
-
-#foto {
-
-    width: 30%;
-    height: 50%;
-
-    border-top-right-radius: 20%;
-    border-bottom-left-radius: 20%;
-    border-top: 20px;
-    border-bottom: 20px;
-    border-left: 0px;
-    border-right: 0px;
-    border-style: double;
-    border-color: #981914;
+p{
+    margin-top: 50px;
+    font-size: 25px;
 }
