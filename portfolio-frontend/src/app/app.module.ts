@@ -31,6 +31,7 @@ import { EditHyssComponent } from './components/hyss/edit-hyss.component';
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
 import { EditBannerComponent } from './components/banner/edit-banner.component';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 
 
  @NgModule({
@@ -56,6 +57,7 @@ import { EditBannerComponent } from './components/banner/edit-banner.component';
     EditProyectosComponent,
     NewProyectosComponent,
     EditBannerComponent,
+    EditAcercaDeComponent,
 
     
     

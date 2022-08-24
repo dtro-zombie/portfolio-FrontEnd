@@ -75,6 +75,8 @@
 img{
     z-index: 2;
     width:95%;
+    height: 95%;
+    border-radius: 5%;
 }
 
 .contenedor-principal
@@ -111,4 +113,52 @@ h3{
 p{
     margin-top: 50px;
     font-size: 25px;
+}
+
+
+.pencil
+{
+    width: 25px;
+}
+.btn-primary {
+   
+    margin: 50px;
+    padding: 10px;
+    background: #981914;
+    border: none;
+    color: white;
+    font-size: 20px;
+    /* pointer-events: none; */
+    cursor: pointer;
+  
+  }
+
+  .img-boton
+  {
+      width: 25px;
+      height: 25px;
+  }
+
+.edit{
+    border-radius: 10%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    background-color: #77dd77;
+    
+}
+b{
+    color: black;
+}
+
+
+
+.cont-boton
+{
+   display: flex;
+  justify-content: center;
+}
+h2
+{
+    margin-top: 20px;
 }

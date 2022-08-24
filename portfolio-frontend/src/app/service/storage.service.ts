@@ -34,6 +34,10 @@ export class StorageService {
          {
            carpeta="banner/"
          }
+         if(nombre.includes("perfil"))
+         {
+           carpeta="perfil/"
+         }
           let respuesta= await this.storareRef.child(carpeta+nombre).putString(imgBase64,'data_url');
           this.rta2=respuesta.ref.fullPath;
           

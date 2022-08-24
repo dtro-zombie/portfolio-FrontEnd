@@ -1,23 +1,9 @@
+
 .pencil
 {
     width: 25px;
 }
-.pencil
-{
-    width: 25px;
-}
-.btn-primary {
-   
-    margin: 50px;
-    padding: 10px;
-    background: #981914;
-    border: none;
-    color: white;
-    font-size: 20px;
-    /* pointer-events: none; */
-    cursor: pointer;
-  
-  }
+
 
   .img-boton
   {

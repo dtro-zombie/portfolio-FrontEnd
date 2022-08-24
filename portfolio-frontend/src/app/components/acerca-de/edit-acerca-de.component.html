@@ -1,0 +1,45 @@
+
+
+<section class="form-contact" *ngIf="Persona">
+  
+    <div class="div-img"><img  class="img-carga" src="{{imagen[0]}}" ></div>
+    <header>
+      <span>
+
+        
+        <div class="btn-upload">
+
+            
+        
+            <input type="file" accept=".bmp, .gif , .jpg, .tif, .png, .jpeg" name="pathimg"
+             (change)="cargarImagen($event)" 
+            id="urlimg">
+            <label for="urlimg" class="labelInputFile"> <img src="../../../assets/resource porfolio/Logos proyecto/upload.png" alt="upload file"> </label>
+    
+        </div>
+       
+      </span>
+    </header>
+
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="contact">
+      <label for="nombres">Nombre</label>
+      <input type="text" class="form-control" name="nombre" id="nombre" [(ngModel)]="Persona.nombre" required>
+
+      <label for="periodos">Apellido</label>
+      <input type="text" class="form-control" name="apellido" id="apellido" [(ngModel)]="Persona.apellido" required>
+    
+      <label for="mensaje">sobre mi</label>
+      <textarea type="text" class="form-control" name="sobremi" id="sobremi" [(ngModel)]="Persona.sobremi" required></textarea>
+      
+      <label for="nombres">Titulo</label>
+      <input type="text" class="form-control" name="titulo" id="titulo" [(ngModel)]="Persona.titulo" required>
+      
+     
+   
+     <div> <button class="btn-primary" [disabled]="loading" (click)="subir()"  >{{(loading)? 'Eperando...': 'Actualizar Perfil'}}</button></div>
+     
+
+    </form>
+
+    
+  </section>
