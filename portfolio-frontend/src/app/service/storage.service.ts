@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 import { deleteObject, getStorage, ref } from '@angular/fire/storage';
 import  firebase from 'firebase/compat/app';
 import 'firebase/compat/storage';
-import { environment } from 'src/environments/environment';
+import { environment} from 'src/environments/environment';
 import { Experiencia } from '../model/experiencia';
 
-
+firebase.initializeApp(environment.firebaseConfig);
 @Injectable({
   providedIn: 'root'
 })

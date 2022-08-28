@@ -37,8 +37,15 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      color: #000;
     }
-    
+.div-btn
+{
+  border: solid;
+  border-color: white;
+ color: #981914;
+  text-align: center;
+}
   
   .div-img
   {
