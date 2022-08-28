@@ -24,19 +24,23 @@ export class StorageService {
          let carpeta:string;
          if(nombre.includes("exp"))
          {
-           carpeta="experiencia/"
+           carpeta="experiencia/";
          }
          if(nombre.includes("edu"))
          {
-           carpeta="educacion/"
+           carpeta="educacion/";
          }
          if(nombre.includes("banner"))
          {
-           carpeta="banner/"
+           carpeta="banner/";
          }
          if(nombre.includes("perfil"))
          {
-           carpeta="perfil/"
+           carpeta="perfil/";
+         }
+         if(nombre.includes("proye"))
+         {
+           carpeta="proye/";
          }
           let respuesta= await this.storareRef.child(carpeta+nombre).putString(imgBase64,'data_url');
           this.rta2=respuesta.ref.fullPath;

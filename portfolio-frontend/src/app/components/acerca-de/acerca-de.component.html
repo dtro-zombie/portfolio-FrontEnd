@@ -1,57 +1,34 @@
 <div class="contenedor-principal" *ngFor="let Persona of Persona">
-    
-    <div class="cont-boton" *ngIf="isLogged">
-        <button class="edit" type="button" routerLink="editperfil/{{Persona.id}}" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
+  <div class="cont-boton" *ngIf="isLogged">
+    <button class="edit" type="button" routerLink="editperfil/{{ Persona.id }}">
+      <div class="pencil">
+        <img
+          class="img-boton"
+          src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"
+        />
       </div>
-<div class="contiene-foto">
-    
-
-    <div class="box"  >
-
-        
-        
-
-        <img src="{{Persona.img}}" id="foto">
-    
-
-</div>
-
-
-</div>
-    
-    
-    
-    <div class="contenedor">
-         
-            <div class="piefoto">
-            <h1>{{Persona.nombre}} {{Persona.apellido}}</h1>
-            
-
-            <h2>{{Persona.titulo}}</h2>
-           
-
-            
-            
-        </div>
-    
-            <div class="descripcion">
-    
-                <div class="sobremi">
-                    <h3 class="textsobremi">SOBRE MI</h3>
-                </div>
-    
-                <p>{{Persona.sobremi}}</p>
-                
-            </div>
-   
-        
-    
+      <b>EDITAR</b>
+    </button>
+  </div>
+  <div class="contiene-foto">
+    <div class="box">
+      <img src="{{ Persona.img }}" id="foto" />
     </div>
-    
-    
-    
-    
-    
-    
-</div>
+  </div>
 
+  <div class="contenedor">
+    <div class="piefoto">
+      <h1>{{ Persona.nombre }} {{ Persona.apellido }}</h1>
+
+      <h2>{{ Persona.titulo }}</h2>
+    </div>
+
+    <div class="descripcion">
+      <div class="sobremi">
+        <h3 class="textsobremi">SOBRE MI</h3>
+      </div>
+
+      <p>{{ Persona.sobremi }}</p>
+    </div>
+  </div>
+</div>

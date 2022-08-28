@@ -21,16 +21,16 @@
     </header>
 
     <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="contact">
-      <label for="nombres">Nombre Educacion</label>
+      <label for="nombres">Nombre Hard o Skill</label>
       <input type="text" class="form-control" name="nombreHard" id="nombreHard" [(ngModel)]="hard.nombreHard" required>
     
     
-      <label for="periodos">Egreso</label>
+      <label for="periodos">Porcentaje</label>
       <input type="text" class="form-control" name="porcentaje" id="porcentaje" [(ngModel)]="hard.porcentaje" required>
     
         
    
-     <div> <button class="btn-primary" [disabled]="loading" (click)="subir()"  >{{(loading)? 'Eperando...': 'Actualizar Educación'}}</button></div>
+     <div> <button class="btn-primary" [disabled]="loading" (click)="subir()"  >{{(loading)? 'Eperando...': 'Actualizar Hard o Skill'}}</button></div>
      
 
     </form>

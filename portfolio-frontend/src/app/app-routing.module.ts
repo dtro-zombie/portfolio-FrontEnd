@@ -12,20 +12,21 @@ import { NewHyssComponent } from './components/hyss/new-hyss.component';
 import { LoginComponent } from './components/login/login.component';
 import { EditProyectosComponent } from './components/proyectos/edit-proyectos.component';
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
+import { PortfolioGuardGuard } from './guards/portfolio-guard.guard';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'login',component:LoginComponent},
-  {path:'nuevaexp',component:NewExperienciaComponent},
-  {path:'editexp/:id',component:EditExperienciaComponent},
-  {path:'nuevaedu',component:NewEducacionComponent},
-  {path:'editedu/:id',component:EditEducacionComponent},
-  {path:'nuevahard',component:NewHyssComponent},
-  {path:'edithard/:id',component:EditHyssComponent},
-  {path:'nuevopro',component:NewProyectosComponent},
-  {path:'editpro/:id',component:EditProyectosComponent},
-  {path:'editbanner/:id',component:EditBannerComponent},
-  {path:'editperfil/:id',component:EditAcercaDeComponent}
+  {path:'nuevaexp',component:NewExperienciaComponent,canActivate:[PortfolioGuardGuard]},
+  {path:'editexp/:id',component:EditExperienciaComponent,canActivate:[PortfolioGuardGuard]},
+  {path:'nuevaedu',component:NewEducacionComponent,canActivate:[PortfolioGuardGuard]},
+  {path:'editedu/:id',component:EditEducacionComponent,canActivate:[PortfolioGuardGuard]},
+  {path:'nuevahard',component:NewHyssComponent,canActivate:[PortfolioGuardGuard]},
+  {path:'edithard/:id',component:EditHyssComponent,canActivate:[PortfolioGuardGuard]},
+  {path:'nuevopro',component:NewProyectosComponent,canActivate:[PortfolioGuardGuard]},
+  {path:'editpros/:id',component:EditProyectosComponent,canActivate:[PortfolioGuardGuard]},
+  {path:'editbanner/:id',component:EditBannerComponent,canActivate:[PortfolioGuardGuard]},
+  {path:'editperfil/:id',component:EditAcercaDeComponent,canActivate:[PortfolioGuardGuard]}
 ];
 
 @NgModule({

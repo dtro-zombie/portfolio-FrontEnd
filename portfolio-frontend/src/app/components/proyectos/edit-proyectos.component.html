@@ -1,1 +1,73 @@
-<p>edit-proyectos works!</p>
+<section class="form-contact" *ngIf="proyecto">
+  
+    <div class="div-img"><img  class="img-carga" src="" ></div>
+    <header>
+      <span>
+
+        
+        <div class="btn-upload">
+
+            
+        
+            <input type="file" accept=".bmp, .gif , .jpg, .tif, .png, .jpeg" name="pathimg"
+             (change)="cargarImagen($event)" 
+            id="urlimg">
+            <label for="urlimg" class="labelInputFile"> <img src="../../../assets/resource porfolio/Logos proyecto/upload.png" alt="upload file"> </label>
+    
+        </div>
+       
+      </span>
+    </header>
+
+    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="contact">
+      <label for="nombre">Nombre de Proyecto</label>
+    <input type="text"
+    class="form-control"
+    name="nombrePro"
+    id="nombrePro"
+   
+    [(ngModel)]="proyecto.nombrePro" 
+  
+    required>
+  
+   
+
+    <label for="periodos">descripcion</label>
+    <input type="text"
+    class="form-control"
+    name="descripcion"
+    id="descripcion"
+ 
+    [(ngModel)]="proyecto.descripcioPro" 
+  
+    required>
+
+    <label for="nombre">link al proyecto</label>
+    <input type="text"
+    class="form-control"
+    name="link"
+    id="link"
+    
+    [(ngModel)]="proyecto.urlpro" 
+  
+    required>
+
+    <label for="nombre">Fecha de realizado</label>
+    <input type="date"
+    class="form-control"
+    name="fecha"
+    id="fecha"
+    
+    [(ngModel)]="proyecto.fecha" 
+  
+    required>
+
+
+
+   <div> <button class="btn-primary" [disabled]="loading" (click)="subir()"  >{{(loading)? 'Eperando...': 'Agregar Proyecto'}}</button></div>
+   
+
+  </form>
+
+    
+  </section>

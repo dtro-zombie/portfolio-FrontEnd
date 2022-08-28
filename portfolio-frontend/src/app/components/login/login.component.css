@@ -31,35 +31,39 @@ img{
 }
 
 .login-username, .login-password {
-    background: transparent;
+ 
     
+    font-weight: bold;
     border-radius: 10px;
-    
-    
     margin: 1rem;
     padding: .5rem;
   
-    
-}
-.login-username:focus{
-    background: white;
   
-    transition: 250ms background ease-in;
 }
-.login-password:focus {
-    background: white;
-     transition: 250ms background ease-in;
-  }
+
+
+
+
 
   .login-submit{
-    color: white;
+ 
     background-color: #981914;
     border-radius: 10px;
-    box-shadow: 0px 1px 5px #3333;
+   
 
     height: 30px;
     width: 60px;
+font-size: 15px;
+font-weight: bold;
+
   }
+ 
+  .login-submit:active{
+    transform: scale(.9);
+  }
+
+
+
   *{
     color: black;
   }

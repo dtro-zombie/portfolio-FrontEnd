@@ -1,21 +1,21 @@
 <div id="contenedor-principal">
-  <h3>HARD & SOFT SKILLS</h3>
+  <h3>PROYECTOS</h3>
       <div> 
            <button type="button" class="btn-primary" routerLink="/nuevopro" *ngIf="isLogged">Nuevo Proyecto</button>
       </div>
 </div>
-<div class="container">
+<div class="container" *ngFor="let proyectos of proyecto" >
     
-    <div class="div-titulo" *ngFor="let proyectos of proyecto" >
+    <div class="div-titulo" >
       <h2>{{proyectos.nombrePro}}</h2>
-      <h4>{{proyectos.fecha}}</h4>
+      <p>{{proyectos.fecha}}</p>
      
 
-      <a href="{{proyectos.link}}" target="_blank" rel="noopener noreferrer" >
+      <a href="{{proyectos.urlpro}}" target="_blank" rel="noopener noreferrer" >
 
         <div class="card">
   
-        
+        <img src="{{proyectos.link}}" alt="">
    
         </div>
 
@@ -27,8 +27,8 @@
   </div>
   
   <div class="cont-boton" *ngIf="isLogged">
-    <button class="edit" type="button" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
-    <button class="delete" type="button" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/delete.png"></div><b>BORRAR</b></button>
+    <button class="edit" type="button" routerLink="/editpros/{{proyectos.id}}" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
+    <button class="delete" type="button" (click)="delete(proyectos.id,proyectos.path)" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/delete.png"></div><b>BORRAR</b></button>
 </div> 
 
   

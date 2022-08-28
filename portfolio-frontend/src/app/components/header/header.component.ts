@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TokenService } from 'src/app/service/token.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class HeaderComponent implements OnInit {
        isLogged=false;
-  constructor(private router:Router, private tokenService:TokenService) { }
+  constructor(private router:Router, private tokenService:TokenService,private cookiService:CookieService) { }
 
   ngOnInit(): void {
     if(this.tokenService.getToken()){
@@ -21,11 +22,12 @@ export class HeaderComponent implements OnInit {
 
   onLogOut():void{
     this.tokenService.logOut();
+    const cookie= this.cookiService.delete('token_access');
     window.location.reload();
   }
 
 login(){
-
+  
   this.router.navigate(['/login'])
 }
 }

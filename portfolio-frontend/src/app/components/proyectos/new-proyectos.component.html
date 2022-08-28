@@ -19,55 +19,54 @@
     </header>
 
     <form (ngSubmit)="onCreate()" novalidate #f="ngForm" class="contact">
-        <label for="nombre">Nombre de Educación</label>
+        <label for="nombre">Nombre de Proyecto</label>
       <input type="text"
       class="form-control"
       name="nombrePro"
       id="nombrePro"
       #input1
       (keyup)="getValue(input1.value)"
-      ([ngModel])="nombrePro" 
+      [(ngModel)]="nombrePro" 
     
       required>
     
      
 
-      <label for="periodos">Egreso</label>
+      <label for="periodos">Descripcion</label>
       <input type="text"
       class="form-control"
       name="descripcion"
       id="descripcion"
       #input3
-      (keyup)="getValue3(input3.value)"
-      ([ngModel])="descripcion" 
+      (keyup)="getValue2(input3.value)"
+      [(ngModel)]="descripcion" 
     
       required>
 
-      <label for="nombre">Nombre de Educación</label>
+      <label for="nombre">Link al proyecto</label>
       <input type="text"
       class="form-control"
       name="link"
       id="link"
-      #input1
-      (keyup)="getValue(input1.value)"
-      ([ngModel])="link" 
+      #input2
+      (keyup)="getValue3(input2.value)"
+      [(ngModel)]="urlpro" 
     
       required>
 
-      <label for="nombre">Nombre de Educación</label>
+      <label for="nombre">Fecha de realizado</label>
       <input type="date"
       class="form-control"
       name="fecha"
       id="fecha"
-      #input1
-      (keyup)="getValue(input1.value)"
-      ([ngModel])="fecha" 
+      
+      [(ngModel)]="fecha" 
     
       required>
 
 
 
-     <div> <button class="btn-primary" [disabled]="loading" (click)="subir()"  >{{(loading)? 'Eperando...': 'Agregar Educación'}}</button></div>
+     <div> <button class="btn-primary" [disabled]="loading" (click)="subir()"  >{{(loading)? 'Eperando...': 'Agregar Proyecto'}}</button></div>
      
 
     </form>

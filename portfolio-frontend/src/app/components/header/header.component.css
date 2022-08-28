@@ -1,9 +1,15 @@
+*
+{
+    color:black;
+}
+
+
 .contenedor-principal
 {
 
     text-align: center;
     background-color: white;
-
+    
 }
 
 
@@ -43,45 +49,19 @@ margin-right: 5px;
 }
 
 
-@media (max-width: 479px){
 
-    .social:hover{
-        border-radius: 50%;
-        box-shadow: 2px 1px 5px #981914;
-    }
-
-    #APlogo
-    {
-        width:75px;
-    }
-
-    .social{
-        width:15px;
-    }
-
-    b{
-            
-            font-size: 12px;        
-    }
-    .btn{
-        
-        text-align: center;
-        font-size: 11px;
-        height: 15px;
-        width: 50px;
-    }
     
-}
-@media (max-width: 296px)
+
+@media (max-width: 500px)
 {
 
     .yo-programo
     {
-        visibility: hidden;
+        display: none;
     }
 
     .social{
-        visibility: hidden;
+        display: none;
     }
 
 }

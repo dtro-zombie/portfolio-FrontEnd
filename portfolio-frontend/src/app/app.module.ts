@@ -32,7 +32,8 @@ import { EditProyectosComponent } from './components/proyectos/edit-proyectos.co
 import { NewProyectosComponent } from './components/proyectos/new-proyectos.component';
 import { EditBannerComponent } from './components/banner/edit-banner.component';
 import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
-
+import { PortfolioGuardGuard } from './guards/portfolio-guard.guard';
+import { CookieService } from 'ngx-cookie-service';
 
  @NgModule({
   declarations: [
@@ -69,7 +70,7 @@ import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.com
     HttpClientModule,  FormsModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideStorage(() => getStorage())
   ],
   providers: [
-    InterceptorProvider
+    InterceptorProvider,PortfolioGuardGuard,CookieService
   ],
   bootstrap: [AppComponent]
 })

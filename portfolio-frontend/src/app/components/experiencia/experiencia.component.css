@@ -22,7 +22,7 @@
 
 
 
-.edit{
+  .edit{
     border-radius: 10%;
     padding: 3px;
     display: flex;
@@ -59,8 +59,11 @@ b{
         color: #ffff;
         text-align: center;
         padding: 20px;
-    
+       
 }
+
+
+
 
 h3{
     
@@ -117,3 +120,8 @@ h3{
 
 
 
+.img-boton
+{
+    width: 25px;
+    height: 25px;
+}

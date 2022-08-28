@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
-
+import { CookieService } from 'ngx-cookie-service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,7 +19,7 @@ password!: string;
 roles: string[]=[];
 errMsj!:string;
 
-  constructor(private tokenService: TokenService, private authService:AuthService, private router:Router) { 
+  constructor(private tokenService: TokenService, private authService:AuthService, private router:Router,private cookieService:CookieService) { 
     
   }
 
@@ -45,12 +45,20 @@ onLogin(): void{
     this.tokenService.setUserName(data.nombreUsuario);
     this.tokenService.setAuthorities(data.authorities);
     this.roles=data.authorities;
-    this.router.navigate([''])
+    this.cookieService.set('token_access',data.token,4,'/');
+
+
+    this.router.navigate(['/'])
+
   },err=>{
     this.isLogged=false;
     this.isLogginFail=true;
     this.errMsj=err.error.mensaje;
-    console.log(this.errMsj);
+    if(this.errMsj='undefined')
+    {
+      alert("Usuario o Contraseña incorrecta");
+    }
+   
      
   })
 }

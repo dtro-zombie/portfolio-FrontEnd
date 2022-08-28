@@ -1,40 +1,50 @@
-
-
 <section class="form-contact" *ngIf="exLab">
-  
-    <div class="div-img"><img  class="img-carga" src="{{imagen[0]}}" ></div>
-    <header>
-      <span>
+  <div class="div-img"><img class="img-carga" src="{{ imagen[0] }}" /></div>
+  <header>
+    <span>
+      <div class="btn-upload">
+        <input
+          type="file"
+          accept=".bmp, .gif , .jpg, .tif, .png, .jpeg"
+          name="pathimg"
+          (change)="cargarImagen($event)"
+          id="urlimg"
+        />
+        <label for="urlimg" class="labelInputFile">
+          <img
+            src="../../../assets/resource porfolio/Logos proyecto/upload.png"
+            alt="upload file"
+          />
+        </label>
+      </div>
+    </span>
+  </header>
 
-        
-        <div class="btn-upload">
+  <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="contact">
+    <label for="nombres">Nombre De Experiencia</label>
+    <input
+      type="text"
+      class="form-control"
+      name="nombreE"
+      id="nombreE"
+      [(ngModel)]="exLab.nombreE"
+      required
+    />
 
-            
-        
-            <input type="file" accept=".bmp, .gif , .jpg, .tif, .png, .jpeg" name="pathimg"
-             (change)="cargarImagen($event)" 
-            id="urlimg">
-            <label for="urlimg" class="labelInputFile"> <img src="../../../assets/resource porfolio/Logos proyecto/upload.png" alt="upload file"> </label>
-    
-        </div>
-       
-      </span>
-    </header>
+    <label for="mensaje">Descripcion de Experiencia</label>
+    <textarea
+      type="text"
+      class="form-control"
+      name="descripcionE"
+      id="descripcionE"
+      [(ngModel)]="exLab.descripcionE"
+      required
+    ></textarea>
 
-    <form (ngSubmit)="onUpdate()" novalidate #f="ngForm" class="contact">
-      <label for="nombres">Nombre De Empresa</label>
-      <input type="text" class="form-control" name="nombreE" id="nombreE" [(ngModel)]="exLab.nombreE" required>
-    
-      <label for="mensaje">Descripcion de Experiencia</label>
-      <textarea type="text" class="form-control" name="descripcionE" id="descripcionE" [(ngModel)]="exLab.descripcionE" required></textarea>
-      
-    
-        
-   
-     <div> <button class="btn-primary" [disabled]="loading" (click)="subir()"  >{{(loading)? 'Eperando...': 'Actualizar experiencia'}}</button></div>
-     
-
-    </form>
-
-    
-  </section>
+    <div>
+      <button class="btn-primary" [disabled]="loading" (click)="subir()">
+        {{ loading ? "Eperando..." : "Actualizar Experiencia" }}
+      </button>
+    </div>
+  </form>
+</section>

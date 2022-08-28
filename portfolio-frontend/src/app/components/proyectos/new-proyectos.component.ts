@@ -19,15 +19,17 @@ export class NewProyectosComponent implements OnInit {
 
   fecha:string="";
 
+  path:string="";
+  urlpro:string="";
   public loading: boolean =true;
-  constructor(private sHard: SProyectoService, private router: Router, private storageService:StorageService) { }
+  constructor(private sProyecto: SProyectoService, private router: Router, private storageService:StorageService) { }
 
   ngOnInit(): void {
   }
 
   onCreate(): void{
-    const hard = new Proyecto(this.nombrePro,this.descripcion,this.link,this.fecha);
-    this.sHard.save(hard).subscribe(
+    const proyecto = new Proyecto(this.nombrePro,this.descripcion,this.link,this.fecha,this.path,this.urlpro);
+    this.sProyecto.save(proyecto).subscribe(
       data=>{
       
         alert("experiencia añadida");
@@ -56,72 +58,89 @@ export class NewProyectosComponent implements OnInit {
     reader.readAsDataURL(archivos[0]);
     reader.onloadend=() =>
     {
-      //this.urlimgHard.toString();
+      this.link.toString();
       
       console.log(reader.result);
       
-      //this.reader2=reader;
-      //this.imagen.push(this.reader2.result);
+      this.reader2=reader;
+      this.imagen.push(this.reader2.result);
      
       
   }
 }
 
- input1='';
+  input1='';
+  input2='';
+  input3='';
+  input4='';
+  getValue(val:string)
+  {
+    console.warn(val);
+    this.input1=val;
+    if(this.input1!='' && this.input2!=''&&this.input3!='' ){
 
- input3='';
-getValue(val:string)
-{
-  console.warn(val);
-  this.input1=val;
-  if(this.input1!='' && this.input3!=''){
+      this.loading=false;
+    }
+    else{
+      this.loading=true
+    }
 
-    this.loading=false;
   }
-  else{
-    this.loading=true;
-  }
-
-}
-
-
-getValue3(val:string)
-{
-  console.warn(val);
-  this.input3=val;
-  
-  if(this.input1!='' && this.input3!=''){
-
-    this.loading=false;
-  }
-  else{
-    this.loading=true;
-  }
-}
-
-
-subir()
-{
-  this.loading=true;
-
-  
-   //this.storageService.subirImagen(this.pathimgHard="edu"+"_"+Date.now(),this.reader2.result).then(urlImagen=>{
-  
-   // this.urlimgHard="";
-  
-  //  console.log(this.urlimgHard+=urlImagen);
-  
-   // setTimeout(() => 
+  getValue2(val:string)
+  {
+    console.warn(val);
+    this.input2=val;
     
-   // this.onCreate(),
-    
-  //  2000);
-    
-  //})
-  
-//  .catch(error=>console.error());
+    if(this.input1!='' && this.input2!=''&&this.input3!=''){
 
-   
-}
+      this.loading=false;
+    }
+    else{
+      this.loading=true
+    }
+  }
+  getValue3(val:string)
+  {
+    console.warn(val);
+    this.input3=val;
+    
+    if(this.input1!='' && this.input2!=''&& this.input3!='' ){
+
+      this.loading=false;
+    }
+    else{
+      this.loading=true
+    }
+  
+ 
+  }
+
+
+      subir()
+    {
+      this.loading=true;
+
+      
+       this.storageService.subirImagen(this.path="proye"+"_"+Date.now(),this.reader2.result).then(urlImagen=>{
+      
+        this.link="";
+      
+        console.log(this.link+=urlImagen);
+      
+        setTimeout(() => 
+        
+        this.onCreate(),
+        
+        2000);
+        
+        
+      })
+      
+      .catch(error=>console.error()
+      
+      );
+
+       
+    }
 
 }

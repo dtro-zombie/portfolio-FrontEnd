@@ -1,34 +1,60 @@
-
-<div id="contenedordexp" >
+<div id="contenedordexp">
   <h3>EXPERIENCIA</h3>
-      <div> 
-          <button type="button" class="btn-primary" routerLink="/nuevaexp" *ngIf="isLogged">nueva experiencia</button>
-      </div>
+  <div>
+    <button
+      type="button"
+      class="btn-primary"
+      routerLink="/nuevaexp"
+      *ngIf="isLogged"
+    >
+      Nueva Experiencia
+    </button>
+  </div>
 </div>
 
-     
 <div class="container">
-
   <div *ngFor="let Experiencia of expe">
+    <div class="card">
+      
 
-    <div class="card" >
+        <img src="{{ Experiencia.urlimg }}" />
      
-      <img
-        src="{{Experiencia.urlimg}}"
-      />
-      <h4>{{Experiencia.nombreE}}</h4>
+    
+      <h4>{{ Experiencia.nombreE }}</h4>
       <p>
-        {{Experiencia.descripcionE}}
+        {{ Experiencia.descripcionE }}
       </p>
-      <p class="periodo">PERIODO</p> 
+      <p class="periodo">PERIODO</p>
 
-      <div class="cont-boton" *ngIf="isLogged">
-          <button class="edit" type="button" routerLink="/editexp/{{Experiencia.id}}" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"></div><b>EDITAR</b></button>
-          <button class="delete" type="button" (click)="delete(Experiencia.id,Experiencia.pathimg)" > <div class="pencil"><img class="img-boton" src="../../../assets/resource porfolio/Logos proyecto/delete.png"></div><b>BORRAR</b></button>
-      </div>      
+      
     </div>
- 
-
-
-</div>
+    <div class="cont-boton" *ngIf="isLogged">
+      <button
+        class="edit"
+        type="button"
+        routerLink="/editexp/{{ Experiencia.id }}"
+      >
+        <div class="pencil">
+          <img
+            class="img-boton"
+            src="../../../assets/resource porfolio/Logos proyecto/iconmonstr-pencil-13.png"
+          />
+        </div>
+        <b>EDITAR</b>
+      </button>
+      <button
+        class="delete"
+        type="button"
+        (click)="delete(Experiencia.id, Experiencia.pathimg)"
+      >
+        <div class="pencil">
+          <img
+            class="img-boton"
+            src="../../../assets/resource porfolio/Logos proyecto/delete.png"
+          />
+        </div>
+        <b>BORRAR</b>
+      </button>
+    </div>
+  </div>
 </div>
