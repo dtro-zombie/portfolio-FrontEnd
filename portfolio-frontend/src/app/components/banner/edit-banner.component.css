@@ -20,6 +20,14 @@
     transform: scale(.9);
   }
   
+.div-btn
+{
+  border: solid;
+  border-color: white;
+ color: #981914;
+  text-align: center;
+}
+
   .btn-upload{
     display: flex;
     justify-content: center;
@@ -37,6 +45,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      color:#000;
     }
     
   
@@ -57,7 +66,7 @@
     }
     .form-contact {
   
-      background: #FFF;
+      background:#981914;
       width: 400px;
       position: absolute;
       top: 50%;
@@ -69,6 +78,7 @@
     header {
       width: 100%;
       background: #981914;
+      
       overflow: hidden;
       color: white;
     }
@@ -110,6 +120,7 @@
       font-size: 20px;
       outline: none;
       color: gray;
+      
     }
     
     .contact textarea {
@@ -118,9 +129,13 @@
     
     .btn-primary {
      
+      width: 100%;
+      border: solid;
+      border-width:0.1px;
+  border-color: white;
       padding: 10px;
       background: #981914;
-      border: none;
+     border: none;
       color: white;
       font-size: 20px;
       /* pointer-events: none; */

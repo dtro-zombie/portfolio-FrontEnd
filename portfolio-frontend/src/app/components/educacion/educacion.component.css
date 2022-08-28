@@ -43,6 +43,11 @@ b{
     color: black;
 }
 
+.edit,.delete:active{
+    
+        transform: scale(.9);
+      
+}
 
 
 .cont-boton

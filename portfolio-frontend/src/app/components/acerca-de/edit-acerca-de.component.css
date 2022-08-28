@@ -37,6 +37,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      color:black;
     }
     
   
@@ -127,3 +128,8 @@
       cursor: pointer;
     
     }
+    .edit:active{
+    
+      transform: scale(.9);
+    
+}

@@ -30,7 +30,7 @@ export class NewHyssComponent implements OnInit {
     this.sHard.save(hard).subscribe(
       data=>{
       
-        alert("experiencia añadida");
+        alert("Hard o Skill Añadida");
         this.router.navigate(['']);
 
       },err=>{

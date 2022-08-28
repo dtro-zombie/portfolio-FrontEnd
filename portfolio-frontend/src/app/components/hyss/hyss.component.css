@@ -85,3 +85,8 @@ h3{
     flex-wrap: wrap
 }
 
+.edit,.delete:active{
+    
+    transform: scale(.9);
+  
+}

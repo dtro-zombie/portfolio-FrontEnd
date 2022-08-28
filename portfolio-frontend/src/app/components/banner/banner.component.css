@@ -19,10 +19,15 @@
     background-color: #77dd77;
     
 }
+
+.edit,.delete:active{
+    
+    transform: scale(.9);
+  
+}
 b{
     color: black;
 }
-
 
 
 .cont-boton

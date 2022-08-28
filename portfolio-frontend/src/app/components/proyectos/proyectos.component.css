@@ -145,3 +145,8 @@ a{
     text-decoration: none;
 }
 
+.edit,.delete:active{
+    
+    transform: scale(.9);
+  
+}
