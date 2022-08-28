@@ -23,8 +23,6 @@ export class NewExperienciaComponent implements OnInit {
 
   urlimg:string='';
 
-  periodoE:string='';
-
   public loading: boolean =true;
   constructor(private sExperiencia: SExperienciaService, private router: Router, private storageService:StorageService) { }
 
@@ -33,7 +31,7 @@ export class NewExperienciaComponent implements OnInit {
   
 
   onCreate(): void{
-    const expe = new Experiencia(this.nombreE,this.descripcionE,this.urlimg,this.pathimg,this.periodoE);
+    const expe = new Experiencia(this.nombreE,this.descripcionE,this.urlimg,this.pathimg);
     this.sExperiencia.save(expe).subscribe(
       data=>{
       

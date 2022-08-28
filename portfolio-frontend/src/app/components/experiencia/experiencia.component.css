@@ -125,10 +125,3 @@ h3{
     width: 25px;
     height: 25px;
 }
-
-
-.edit,.delete:active{
-    
-    transform: scale(.9);
-  
-}
