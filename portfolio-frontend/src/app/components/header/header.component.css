@@ -32,13 +32,6 @@ margin-right: 5px;
     justify-content: space-between;
 }
 
-
-.btn:active{
-    
-    transform: scale(.9);
-  
-}
-
 .btn{
 
     color: white;

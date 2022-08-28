@@ -5,13 +5,12 @@ export class Experiencia {
     descripcionE:string;
     pathimg:string;
     urlimg:string;
-    periodoE:string
-    constructor(nombreE: string, descripcion:string, urlimg:string,pathimg:string,periodoE:string)
+
+    constructor(nombreE: string, descripcion:string, urlimg:string,pathimg:string)
     {
         this.nombreE=nombreE;
         this.descripcionE=descripcion;
         this.pathimg=pathimg;
         this.urlimg=urlimg;
-        this.periodoE=periodoE;
     }
 }
