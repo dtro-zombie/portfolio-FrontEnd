@@ -5,7 +5,7 @@ import 'firebase/compat/storage';
 import { environment } from 'src/environments/environment';
 import { Experiencia } from '../model/experiencia';
 
-firebase.initializeApp(environment.firebaseConfig);
+
 @Injectable({
   providedIn: 'root'
 })
@@ -50,7 +50,7 @@ export class StorageService {
 
     } catch (err){
       console.log(err);
-      return "https://png.pngtree.com/png-clipart/20190921/original/pngtree-no-photo-taking-photo-illustration-png-image_4698291.jpg";
+      return "https://firebasestorage.googleapis.com/v0/b/portfolio-storage-1.appspot.com/o/pexels-danny-meneses-943096.jpg?alt=media&token=cd51fbec-4e7c-4a5a-8375-71e5ff6a43ef";
     }
   }
 

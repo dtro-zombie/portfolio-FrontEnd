@@ -12,7 +12,7 @@ export const environment = {
     authDomain: 'portfolio-storage-1.firebaseapp.com',
     messagingSenderId: '931319269166',
   },
-  production: false,
+  production: true,
   useEmulators: true,
   firebaseConfig : {
     apiKey: "AIzaSyB6qkLgsXGB3FExjDALlx4djzzuppvlynE",

@@ -34,6 +34,7 @@ import { EditBannerComponent } from './components/banner/edit-banner.component';
 import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 import { PortfolioGuardGuard } from './guards/portfolio-guard.guard';
 import { CookieService } from 'ngx-cookie-service';
+import { AngularFireModule } from '@angular/fire/compat';
 
  @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import { CookieService } from 'ngx-cookie-service';
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule,  FormsModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideStorage(() => getStorage())
+    HttpClientModule,  FormsModule, provideFirebaseApp(() => initializeApp(environment.firebase)), provideStorage(() => getStorage()),
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
     InterceptorProvider,PortfolioGuardGuard,CookieService
