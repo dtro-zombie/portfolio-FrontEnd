@@ -1,19 +1,5 @@
 {
   "storage": {
     "rules": "storage.rules"
-  },
-  "hosting": {
-    "public": "dist/portfolio-frontend",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
   }
 }
