@@ -7,8 +7,8 @@ import { Hard } from '../model/hard';
   providedIn: 'root'
 })
 export class SHardService {
-  hardURL="https://back-portfoliona.herokuapp.com/hard/"
-  //hardURL="http://localhost:8080/hard/"
+   hardURL="https://back-portfoliona.herokuapp.com/hard/"
+ //hardURL="http://localhost:8080/hard/"
   constructor(private httpClient:HttpClient) { }
 
   public lista():Observable<Hard[]>{

@@ -41,6 +41,16 @@
       required
     ></textarea>
 
+    <label for="periodos">Fecha</label>
+    <input
+      type="date"
+      class="form-control"
+      name="periodo"
+      id="periodo"
+      [(ngModel)]="exLab.periodoE"
+      required
+    />
+
     <div>
       <button class="btn-primary" [disabled]="loading" (click)="subir()">
         {{ loading ? "Eperando..." : "Actualizar Experiencia" }}

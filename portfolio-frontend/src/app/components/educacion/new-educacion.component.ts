@@ -31,7 +31,7 @@ export class NewEducacionComponent implements OnInit {
     this.sEducacion.save(edu).subscribe(
       data=>{
       
-        alert("experiencia añadida");
+        alert("Educacion Añadida");
         this.router.navigate(['']);
 
       },err=>{
@@ -70,12 +70,12 @@ export class NewEducacionComponent implements OnInit {
 
  input1='';
 input2='';
- input3='';
+ 
 getValue(val:string)
 {
   console.warn(val);
   this.input1=val;
-  if(this.input1!='' && this.input2!=''&& this.input3!=''){
+  if(this.input1!='' && this.input2!=''){
 
     this.loading=false;
   }
@@ -89,7 +89,7 @@ getValue2(val:string)
   console.warn(val);
   this.input2=val;
   
-  if(this.input1!='' && this.input2!=''&& this.input3!=''){
+  if(this.input1!='' && this.input2!=''){
 
     this.loading=false;
   }
@@ -97,19 +97,7 @@ getValue2(val:string)
     this.loading=true
   }
 }
-getValue3(val:string)
-{
-  console.warn(val);
-  this.input3=val;
-  
-  if(this.input1!='' && this.input2!='' && this.input3!=''){
 
-    this.loading=false;
-  }
-  else{
-    this.loading=true
-  }
-}
 
 
 subir()

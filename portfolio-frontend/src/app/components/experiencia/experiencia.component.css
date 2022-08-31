@@ -52,6 +52,8 @@ b{
     background-color:#ff6961;
 }
 
+
+
 #contenedordexp
 {
     
@@ -59,6 +61,7 @@ b{
         color: #ffff;
         text-align: center;
         padding: 20px;
+        margin-top: 10%;
        
 }
 
@@ -124,4 +127,26 @@ h3{
 {
     width: 25px;
     height: 25px;
+}
+
+
+@media (max-width: 500px)
+{
+
+.principal
+{
+    margin-top: 100%;
+}
+
+}
+
+
+@media (max-width: 200px)
+{
+
+.principal
+{
+    margin-top: 300%;
+}
+
 }

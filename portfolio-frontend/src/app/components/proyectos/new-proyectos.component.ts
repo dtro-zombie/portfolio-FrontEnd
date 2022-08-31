@@ -32,7 +32,7 @@ export class NewProyectosComponent implements OnInit {
     this.sProyecto.save(proyecto).subscribe(
       data=>{
       
-        alert("experiencia añadida");
+        alert("Proyecto Añadido");
         this.router.navigate(['']);
 
       },err=>{

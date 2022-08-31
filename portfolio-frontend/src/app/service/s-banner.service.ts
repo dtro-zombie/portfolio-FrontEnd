@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 export class SBannerService {
 
   bannerURL="https://back-portfoliona.herokuapp.com/banner/";
-  //bannerURL="http://localhost:8080/banner/"
+ // bannerURL="http://localhost:8080/banner/"
   constructor(private httpClient:HttpClient) { }
 
   public lista():Observable<Banner[]>{
