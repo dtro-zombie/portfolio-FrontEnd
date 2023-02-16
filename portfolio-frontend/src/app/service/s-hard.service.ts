@@ -7,7 +7,8 @@ import { Hard } from '../model/hard';
   providedIn: 'root'
 })
 export class SHardService {
-   hardURL="https://back-portfoliona.herokuapp.com/hard/"
+  hardURL="https://portfolio-backend-production-6c72.up.railway.app/hard/";
+   //hardURL="https://back-portfoliona.herokuapp.com/hard/"
  //hardURL="http://localhost:8080/hard/"
   constructor(private httpClient:HttpClient) { }
 

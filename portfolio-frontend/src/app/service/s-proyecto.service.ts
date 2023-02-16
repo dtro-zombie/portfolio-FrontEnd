@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SProyectoService {
-   proyectoURL="https://back-portfoliona.herokuapp.com/proyecto/"
+  proyectoURL="https://portfolio-backend-production-6c72.up.railway.app/proyecto/";
+   //proyectoURL="https://back-portfoliona.herokuapp.com/proyecto/"
  //proyectoURL="http://localhost:8080/proyecto/"
   constructor(private httpClient:HttpClient) { }
 

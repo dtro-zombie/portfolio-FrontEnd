@@ -7,8 +7,9 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class SBannerService {
+  bannerURL="https://portfolio-backend-production-6c72.up.railway.app/banner/";
 
-  bannerURL="https://back-portfoliona.herokuapp.com/banner/";
+  //bannerURL="https://back-portfoliona.herokuapp.com/banner/";
  // bannerURL="http://localhost:8080/banner/"
   constructor(private httpClient:HttpClient) { }
 
