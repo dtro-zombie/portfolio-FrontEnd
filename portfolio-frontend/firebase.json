@@ -3,7 +3,7 @@
     "rules": "storage.rules"
   },
   "hosting": {
-    "public": "dist/portfolio-frontend",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",
